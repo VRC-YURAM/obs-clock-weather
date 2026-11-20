@@ -73,11 +73,3 @@ const cities = [
 무료 Open-Meteo API는 비상업용입니다. 방송에서 날씨를 표시하면 방송 설명란 등 시청자가 확인할 수 있는 곳에 출처를 적어 주세요. [Open-Meteo 이용 조건](https://open-meteo.com/en/pricing)
 
 > 날씨 데이터 제공: [Open-Meteo](https://open-meteo.com/) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). 기온을 정수로 반올림하고 날씨 코드를 한국어 상태와 아이콘으로 표시합니다.
-
-## GitHub Pages로 공개하기
-
-1. GitHub에서 공개 저장소를 만들고, 배포 파일을 저장소 최상위에 올립니다.
-2. **Settings → Pages → Build and deployment**에서 **Deploy from a branch**를 선택합니다.
-3. 브랜치를 `main`, 폴더를 `/(root)`로 선택하고 저장합니다.
-4. 배포 후 **Visit site**에서 미리보기와 다운로드를 확인합니다. [GitHub Pages 설정 안내](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
-

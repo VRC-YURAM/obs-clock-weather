@@ -10,13 +10,14 @@
   #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
   a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
 .weather{justify-content:center;align-items:center;gap:9px} #icon{font:22px/1 "Segoe UI Symbol",sans-serif} #temperature{font-size:25px}
+.widget-credit{display:block;text-align:center;margin-top:2px;font-size:10px;line-height:11px;color:inherit}
 .weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
 .weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
 </style>
 </head>
 <body>
 <div class="weather"><span id="icon" aria-hidden="true"></span><span id="temperature">—</span><span id="location"></span><span id="condition">날씨 불러오는 중</span></div>
-<!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+<a class="widget-credit" href="https://open-meteo.com/">날씨 데이터 제공 · Open-Meteo</a>
 <script>
   function describeWeather(code) {
     if (code === 0) return "맑음";

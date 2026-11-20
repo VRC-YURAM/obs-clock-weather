@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OBS 시계와 날씨 디자인</title>
+<style>
+*{box-sizing:border-box} body{margin:0;background:#111820;color:#edf4f7;font-family:"Malgun Gothic",sans-serif}
+main{max-width:880px;margin:auto;padding:36px 18px} h1{font-size:30px;margin:0} h2.group{font-size:23px;margin:26px 0 10px} nav{display:flex;gap:16px;margin:8px 0 20px} p{color:#b9c9d2;line-height:1.5;margin:10px 0 28px}
+section{margin:0 0 14px;padding:16px;border:1px solid #364550;border-radius:14px;background:#1b2630} header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px} h2{font-size:17px;margin:0} header span{color:#bacad5;font-size:13px;white-space:nowrap}
+.variants{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px} .preview{border-radius:8px;overflow:hidden} .white{background:#0b1118} .black{background:#edf2f4} iframe{display:block;border:0;width:100%} a{display:inline-block;color:#a9ecd1;margin-top:8px;font-size:13px}
+@media(max-width:540px){.variants{grid-template-columns:1fr}}
+</style></head><body><main><h1>OBS 시계와 날씨 디자인</h1><nav aria-label="디자인 종류"><a href="#clock">시계</a><a href="#weather">날씨</a></nav><p>원하는 색상의 HTML을 내려받아 OBS에서 브라우저 소스의 로컬 파일로 추가하세요. 각 디자인에 표시된 크기는 OBS 권장 너비와 높이입니다.</p><h2 class="group" id="clock">시계</h2><p>미리보기는 예시입니다. OBS용 HTML은 한국 시간과 날짜를 표시합니다.</p><section><header><h2>한 줄형</h2><span>OBS 460 × 64</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="한 줄형 흰색 미리보기" sandbox height="64" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;title>OBS 시계 · 한 줄형&lt;/title>
+&lt;style>
+body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#fff;font-family:&quot;Malgun Gothic&quot;,sans-serif}
+.clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
+.clock{display:flex;align-items:center;gap:16px}.date{font-size:17px}.time{font-size:30px}
+@media(max-width:330px){.clock{gap:8px}.date{font-size:14px}.time{font-size:25px}}
+&lt;/style>&lt;/head>
+&lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
+&lt;/body>&lt;/html>"></iframe></div><a href="obs-clock-date-inline-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="한 줄형 검정색 미리보기" sandbox height="64" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;title>OBS 시계 · 한 줄형&lt;/title>
+&lt;style>
+body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#000;font-family:&quot;Malgun Gothic&quot;,sans-serif}
+.clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
+.clock{display:flex;align-items:center;gap:16px}.date{font-size:17px}.time{font-size:30px}
+@media(max-width:330px){.clock{gap:8px}.date{font-size:14px}.time{font-size:25px}}
+&lt;/style>&lt;/head>
+&lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
+&lt;/body>&lt;/html>"></iframe></div><a href="obs-clock-date-inline-black.html" download>검정색 HTML</a></div></div></section><section><header><h2>시간 강조형</h2><span>OBS 290 × 114</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="시간 강조형 흰색 미리보기" sandbox height="114" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;title>OBS 시계 · 시간 강조형&lt;/title>
+&lt;style>
+body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#fff;font-family:&quot;Malgun Gothic&quot;,sans-serif}
+.clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
+.clock{display:grid;justify-items:center;gap:5px}.date{font-size:17px}.time{font-size:48px}
+
+&lt;/style>&lt;/head>
+&lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
+&lt;/body>&lt;/html>"></iframe></div><a href="obs-clock-date-stack-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="시간 강조형 검정색 미리보기" sandbox height="114" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;title>OBS 시계 · 시간 강조형&lt;/title>
+&lt;style>
+body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#000;font-family:&quot;Malgun Gothic&quot;,sans-serif}
+.clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
+.clock{display:grid;justify-items:center;gap:5px}.date{font-size:17px}.time{font-size:48px}
+
+&lt;/style>&lt;/head>
+&lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
+&lt;/body>&lt;/html>"></iframe></div><a href="obs-clock-date-stack-black.html" download>검정색 HTML</a></div></div></section><section><header><h2>날짜 강조형</h2><span>OBS 340 × 92</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="날짜 강조형 흰색 미리보기" sandbox height="92" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;title>OBS 시계 · 날짜 강조형&lt;/title>
+&lt;style>
+body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#fff;font-family:&quot;Malgun Gothic&quot;,sans-serif}
+.clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
+.clock{display:grid;justify-items:center;gap:2px}.date{font-size:30px;font-weight:700;line-height:1.12}.time{font-size:22px;font-weight:650;line-height:1.12}
+
+&lt;/style>&lt;/head>
+&lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
+&lt;/body>&lt;/html>"></iframe></div><a href="obs-clock-date-date-focus-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="날짜 강조형 검정색 미리보기" sandbox height="92" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;title>OBS 시계 · 날짜 강조형&lt;/title>
+&lt;style>
+body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#000;font-family:&quot;Malgun Gothic&quot;,sans-serif}
+.clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
+.clock{display:grid;justify-items:center;gap:2px}.date{font-size:30px;font-weight:700;line-height:1.12}.time{font-size:22px;font-weight:650;line-height:1.12}
+
+&lt;/style>&lt;/head>
+&lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
+&lt;/body>&lt;/html>"></iframe></div><a href="obs-clock-date-date-focus-black.html" download>검정색 HTML</a></div></div></section><section><header><h2>둥근 테두리형</h2><span>OBS 320 × 130</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="둥근 테두리형 흰색 미리보기" sandbox height="130" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;title>OBS 시계 · 둥근 테두리형&lt;/title>
+&lt;style>
+body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#fff;font-family:&quot;Malgun Gothic&quot;,sans-serif}
+.clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
+.clock{display:grid;justify-items:center;gap:4px;width:max-content;margin:auto;padding:8px 25px;border:1px solid currentColor;border-radius:22px}.date{font-size:17px}.time{font-size:44px}
+
+&lt;/style>&lt;/head>
+&lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
+&lt;/body>&lt;/html>"></iframe></div><a href="obs-clock-date-rounded-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="둥근 테두리형 검정색 미리보기" sandbox height="130" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>&lt;head>&lt;meta charset=&quot;utf-8&quot;>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+&lt;title>OBS 시계 · 둥근 테두리형&lt;/title>
+&lt;style>
+body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#000;font-family:&quot;Malgun Gothic&quot;,sans-serif}
+.clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
+.clock{display:grid;justify-items:center;gap:4px;width:max-content;margin:auto;padding:8px 25px;border:1px solid currentColor;border-radius:22px}.date{font-size:17px}.time{font-size:44px}
+
+&lt;/style>&lt;/head>
+&lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
+&lt;/body>&lt;/html>"></iframe></div><a href="obs-clock-date-rounded-black.html" download>검정색 HTML</a></div></div></section><h2 class="group" id="weather">날씨</h2><p>서울의 예시 날씨로 글자 배치를 비교해 보세요. OBS용 HTML은 국내 8개 도시의 현재 날씨를 8초마다 순서대로 표시합니다.</p><section><header><h2>둥근 테두리 · 한 줄</h2><span>OBS 360 × 64</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="둥근 테두리 · 한 줄 흰색 미리보기" sandbox height="64" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #fff; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{width:max-content;margin:auto;padding:6px 15px;align-items:center;border:1px solid currentColor;border-radius:999px;gap:8px} #icon{font:20px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{font-size:24px;line-height:1.1} #location,#condition{font-size:14px} #temperature,#location,#condition{position:relative;top:-1px}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-round-pill-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="둥근 테두리 · 한 줄 검정색 미리보기" sandbox height="64" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #000; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{width:max-content;margin:auto;padding:6px 15px;align-items:center;border:1px solid currentColor;border-radius:999px;gap:8px} #icon{font:20px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{font-size:24px;line-height:1.1} #location,#condition{font-size:14px} #temperature,#location,#condition{position:relative;top:-1px}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-round-pill-black.html" download>검정색 HTML</a></div></div></section><section><header><h2>둥근 테두리 · 기온 강조</h2><span>OBS 280 × 102</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="둥근 테두리 · 기온 강조 흰색 미리보기" sandbox height="102" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #fff; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;width:max-content;min-width:178px;margin:auto;padding:8px 15px;border:1px solid currentColor;border-radius:18px;grid-template-columns:1fr max-content max-content 1fr;justify-items:center;align-items:center;column-gap:8px;row-gap:4px} #icon{grid-column:2;font:25px/1 &quot;Segoe UI Symbol&quot;,sans-serif;align-self:center} #temperature{grid-column:3;font-size:38px;line-height:1.1} .details{grid-column:1/-1;font-size:14px;display:flex;gap:6px;align-items:center}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-round-card-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="둥근 테두리 · 기온 강조 검정색 미리보기" sandbox height="102" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #000; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;width:max-content;min-width:178px;margin:auto;padding:8px 15px;border:1px solid currentColor;border-radius:18px;grid-template-columns:1fr max-content max-content 1fr;justify-items:center;align-items:center;column-gap:8px;row-gap:4px} #icon{grid-column:2;font:25px/1 &quot;Segoe UI Symbol&quot;,sans-serif;align-self:center} #temperature{grid-column:3;font-size:38px;line-height:1.1} .details{grid-column:1/-1;font-size:14px;display:flex;gap:6px;align-items:center}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-round-card-black.html" download>검정색 HTML</a></div></div></section><section><header><h2>둥근 테두리 · 세로</h2><span>OBS 220 × 154</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="둥근 테두리 · 세로 흰색 미리보기" sandbox height="154" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #fff; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;width:max-content;min-width:125px;margin:auto;padding:10px 12px;border:1px solid currentColor;border-radius:26px;justify-items:center;justify-content:center;gap:0} #icon{font:27px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{font-size:42px;line-height:1.1;margin-top:-2px} .details{margin-top:3px;font-size:13px;display:flex;gap:5px;align-items:center}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-round-stack-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="둥근 테두리 · 세로 검정색 미리보기" sandbox height="154" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #000; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;width:max-content;min-width:125px;margin:auto;padding:10px 12px;border:1px solid currentColor;border-radius:26px;justify-items:center;justify-content:center;gap:0} #icon{font:27px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{font-size:42px;line-height:1.1;margin-top:-2px} .details{margin-top:3px;font-size:13px;display:flex;gap:5px;align-items:center}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-round-stack-black.html" download>검정색 HTML</a></div></div></section><section><header><h2>가운데 · 한 줄</h2><span>OBS 360 × 58</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="가운데 · 한 줄 흰색 미리보기" sandbox height="58" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #fff; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{justify-content:center;align-items:center;gap:9px} #icon{font:22px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{font-size:25px}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-center-inline-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="가운데 · 한 줄 검정색 미리보기" sandbox height="58" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #000; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{justify-content:center;align-items:center;gap:9px} #icon{font:22px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{font-size:25px}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-center-inline-black.html" download>검정색 HTML</a></div></div></section><section><header><h2>가운데 · 기온 강조</h2><span>OBS 280 × 88</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="가운데 · 기온 강조 흰색 미리보기" sandbox height="88" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #fff; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;grid-template-columns:1fr max-content max-content 1fr;justify-items:center;align-items:center;column-gap:8px;row-gap:3px} #icon{grid-column:2;font:27px/1 &quot;Segoe UI Symbol&quot;,sans-serif;align-self:center} #temperature{grid-column:3;font-size:39px;line-height:1.1} .details{grid-column:1/-1;font-size:14px;display:flex;gap:7px;align-items:center}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-center-pair-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="가운데 · 기온 강조 검정색 미리보기" sandbox height="88" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #000; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;grid-template-columns:1fr max-content max-content 1fr;justify-items:center;align-items:center;column-gap:8px;row-gap:3px} #icon{grid-column:2;font:27px/1 &quot;Segoe UI Symbol&quot;,sans-serif;align-self:center} #temperature{grid-column:3;font-size:39px;line-height:1.1} .details{grid-column:1/-1;font-size:14px;display:flex;gap:7px;align-items:center}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-center-pair-black.html" download>검정색 HTML</a></div></div></section><section><header><h2>가운데 · 세로</h2><span>OBS 210 × 132</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="가운데 · 세로 흰색 미리보기" sandbox height="132" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #fff; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;justify-items:center;justify-content:center;gap:0} #icon{font:28px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{font-size:44px;line-height:1.1;margin-top:-2px} .details{margin-top:2px;font-size:14px;display:flex;gap:7px;align-items:center}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-center-stack-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="가운데 · 세로 검정색 미리보기" sandbox height="132" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #000; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;justify-items:center;justify-content:center;gap:0} #icon{font:28px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{font-size:44px;line-height:1.1;margin-top:-2px} .details{margin-top:2px;font-size:14px;display:flex;gap:7px;align-items:center}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-center-stack-black.html" download>검정색 HTML</a></div></div></section><section><header><h2>미니멀 아이콘</h2><span>OBS 300 × 89</span></header><div class="variants"><div class="variant"><div class="preview white"><iframe title="미니멀 아이콘 흰색 미리보기" sandbox height="89" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #fff; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;grid-template-columns:minmax(32px,max-content) max-content;gap:1px 10px;align-items:center;justify-content:start} #icon{font:26px/1 &quot;Segoe UI Symbol&quot;,sans-serif;text-align:center} #temperature{font-size:34px;line-height:1.12} #location,#condition{font-size:13px} #location{justify-self:center} #condition{grid-column:2;grid-row:2} #location{grid-column:1;grid-row:2}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-minimal-white.html" download>흰색 HTML</a></div><div class="variant"><div class="preview black"><iframe title="미니멀 아이콘 검정색 미리보기" sandbox height="89" srcdoc="&lt;!doctype html>
+&lt;html lang=&quot;ko&quot;>
+&lt;head>
+&lt;meta charset=&quot;utf-8&quot;>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;>
+&lt;title>OBS 현재 날씨&lt;/title>
+&lt;style>
+  body { margin: 0; padding: 8px; overflow: hidden; background: transparent; color: #000; font-family: &quot;Malgun Gothic&quot;, sans-serif; }
+  .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
+  #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
+  a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
+.weather{display:grid;grid-template-columns:minmax(32px,max-content) max-content;gap:1px 10px;align-items:center;justify-content:start} #icon{font:26px/1 &quot;Segoe UI Symbol&quot;,sans-serif;text-align:center} #temperature{font-size:34px;line-height:1.12} #location,#condition{font-size:13px} #location{justify-self:center} #condition{grid-column:2;grid-row:2} #location{grid-column:1;grid-row:2}
+.weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
+.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/div>
+&lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
+
+&lt;/body>
+&lt;/html>
+"></iframe></div><a href="obs-weather-minimal-black.html" download>검정색 HTML</a></div></div></section></main></body></html>

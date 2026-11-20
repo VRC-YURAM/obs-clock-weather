@@ -12,7 +12,7 @@ section{margin:0 0 14px;padding:16px;border:1px solid #364550;border-radius:14px
 &lt;style>
 body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#fff;font-family:&quot;Malgun Gothic&quot;,sans-serif}
 .clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
-.clock{display:flex;align-items:center;gap:16px}.date{font-size:17px}.time{font-size:30px}
+.clock{display:flex;align-items:center;justify-content:center;gap:16px}.date{font-size:17px}.time{font-size:30px}
 @media(max-width:330px){.clock{gap:8px}.date{font-size:14px}.time{font-size:25px}}
 &lt;/style>&lt;/head>
 &lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
@@ -22,7 +22,7 @@ body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#fff;font
 &lt;style>
 body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#000;font-family:&quot;Malgun Gothic&quot;,sans-serif}
 .clock{white-space:nowrap;font-weight:650;font-variant-numeric:tabular-nums}.date{line-height:1.25}.time{line-height:1.12;font-weight:700;letter-spacing:-.025em}
-.clock{display:flex;align-items:center;gap:16px}.date{font-size:17px}.time{font-size:30px}
+.clock{display:flex;align-items:center;justify-content:center;gap:16px}.date{font-size:17px}.time{font-size:30px}
 @media(max-width:330px){.clock{gap:8px}.date{font-size:14px}.time{font-size:25px}}
 &lt;/style>&lt;/head>
 &lt;body>&lt;div class=&quot;clock&quot;>&lt;span id=&quot;date&quot; class=&quot;date&quot;>2026년 11월 20일&lt;/span>&lt;span id=&quot;time&quot; class=&quot;time&quot;>14:35:08&lt;/span>&lt;/div>
@@ -355,13 +355,12 @@ body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#000;font
   .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
   #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
   a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
-.weather{display:grid;grid-template-columns:minmax(32px,max-content) max-content;gap:1px 10px;align-items:center;justify-content:start} #icon{font:26px/1 &quot;Segoe UI Symbol&quot;,sans-serif;text-align:center} #temperature{font-size:34px;line-height:1.12} #location,#condition{font-size:13px} #location{justify-self:center} #condition{grid-column:2;grid-row:2} #location{grid-column:1;grid-row:2}
+.weather{display:grid;grid-template-columns:1fr max-content max-content 1fr;align-items:center;justify-items:center;gap:4px 8px} #icon{grid-column:2;font:26px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{grid-column:3;font-size:34px;line-height:1.12} .details{grid-column:1/-1;display:flex;justify-content:center;align-items:baseline;gap:6px;font-size:13px}
 .weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
-.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
 &lt;/style>
 &lt;/head>
 &lt;body>
-&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/div>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
 &lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
 
 &lt;/body>
@@ -377,13 +376,12 @@ body{margin:0;padding:8px;overflow:hidden;background:transparent;color:#000;font
   .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
   #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
   a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
-.weather{display:grid;grid-template-columns:minmax(32px,max-content) max-content;gap:1px 10px;align-items:center;justify-content:start} #icon{font:26px/1 &quot;Segoe UI Symbol&quot;,sans-serif;text-align:center} #temperature{font-size:34px;line-height:1.12} #location,#condition{font-size:13px} #location{justify-self:center} #condition{grid-column:2;grid-row:2} #location{grid-column:1;grid-row:2}
+.weather{display:grid;grid-template-columns:1fr max-content max-content 1fr;align-items:center;justify-items:center;gap:4px 8px} #icon{grid-column:2;font:26px/1 &quot;Segoe UI Symbol&quot;,sans-serif} #temperature{grid-column:3;font-size:34px;line-height:1.12} .details{grid-column:1/-1;display:flex;justify-content:center;align-items:baseline;gap:6px;font-size:13px}
 .weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
-.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
 &lt;/style>
 &lt;/head>
 &lt;body>
-&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/div>
+&lt;div class=&quot;weather&quot;>&lt;span id=&quot;icon&quot;>☁︎&lt;/span>&lt;span id=&quot;temperature&quot;>12°C&lt;/span>&lt;span class=&quot;details&quot;>&lt;span id=&quot;location&quot;>서울&lt;/span>&lt;span aria-hidden=&quot;true&quot;>·&lt;/span>&lt;span id=&quot;condition&quot;>구름 조금&lt;/span>&lt;/span>&lt;/div>
 &lt;!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
 
 &lt;/body>

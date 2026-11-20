@@ -9,13 +9,12 @@
   .weather { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; font-size: 17px; font-weight: 650; }
   #temperature { font-size: 30px; font-variant-numeric: tabular-nums; }
   a { display: block; color: inherit; font-size: 11px; text-decoration: none; }
-.weather{display:grid;grid-template-columns:minmax(32px,max-content) max-content;gap:1px 10px;align-items:center;justify-content:start} #icon{font:26px/1 "Segoe UI Symbol",sans-serif;text-align:center} #temperature{font-size:34px;line-height:1.12} #location,#condition{font-size:13px} #location{justify-self:center} #condition{grid-column:2;grid-row:2} #location{grid-column:1;grid-row:2}
+.weather{display:grid;grid-template-columns:1fr max-content max-content 1fr;align-items:center;justify-items:center;gap:4px 8px} #icon{grid-column:2;font:26px/1 "Segoe UI Symbol",sans-serif} #temperature{grid-column:3;font-size:34px;line-height:1.12} .details{grid-column:1/-1;display:flex;justify-content:center;align-items:baseline;gap:6px;font-size:13px}
 .weather #location,.weather #condition{line-height:1.2} .weather .details{line-height:1.2}
-.weather #temperature{line-height:1.1;position:relative;top:-2px} .weather #location,.weather #condition{position:relative;top:-2px}
 </style>
 </head>
 <body>
-<div class="weather"><span id="icon" aria-hidden="true"></span><span id="temperature">—</span><span id="location"></span><span id="condition">날씨 불러오는 중</span></div>
+<div class="weather"><span id="icon" aria-hidden="true"></span><span id="temperature">—</span><span class="details"><span id="location"></span><span aria-hidden="true">·</span><span id="condition">날씨 불러오는 중</span></span></div>
 <!-- 방송 설명란에 표시할 출처: 날씨 데이터 · Open-Meteo (https://open-meteo.com/) -->
 <script>
   function describeWeather(code) {
